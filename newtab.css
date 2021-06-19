@@ -1,0 +1,222 @@
+.hide {
+    display: none;
+}
+
+html,
+body {
+    background-color: rgb(25, 25, 27);
+}
+
+body {
+    color: #343434;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+#note-content {
+    box-sizing: border-box;
+    border: 0;
+    line-height: 1.75rem;
+    margin: 0;
+    min-height: 100vh;
+    height: auto;
+    resize: none;
+    width: 100%;
+    background-color: rgb(25, 25, 27);
+    padding: 4rem 20% 2rem 10%;
+    font-size: 20px;
+    font-family: Cutive Mono;
+}
+
+#list-indicator:checked ~ #note-content {
+    padding-left: calc(10% + 230px);
+    padding-right: calc(20% - 230px);
+}
+
+textarea {
+    color: rgba(255, 255, 255, 0.932);
+    cursor: default;
+}
+
+textarea::selection,
+::selection {
+    color: rgb(25, 25, 27);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+}
+
+/* Multi-note */
+#list-trigger {
+    position: fixed;
+    top: 12px;
+    left: 14px;
+    width: 24px;
+    cursor: pointer;
+}
+
+#list-trigger span {
+    display: block;
+    -moz-context-properties: fill, fill-opacity;
+    height: 24px;
+    width: 24px;
+    background-image: url(./icons/list.svg);
+    fill: #fff;
+    fill-opacity: 0.6;
+}
+
+#list-indicator:checked ~ #list-trigger span {
+    background-image: url(./icons/list-open.svg);
+}
+
+#list-trigger span:hover {
+    fill-opacity: 1;
+}
+
+#list {
+    box-sizing: border-box;
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: -320px;
+    bottom: 0;
+    background: rgb(28, 28, 30);
+    color: rgba(255, 255, 255, 0.933);
+    border-top: 48px;
+    border-top-style: solid;
+    border-color: transparent;
+    user-select: none;
+}
+
+#list-outer {
+    position: absolute;
+    background: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#list-indicator:checked ~ #list {
+    left: 0;
+    box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.27), 0 0 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+#list .list-inner {
+    position: relative;
+    padding: 0 12px;
+    margin: 0;
+}
+
+.create_entry {
+    cursor: pointer;
+    display: block;
+    opacity: 0.45;
+    width: 22px;
+    height: 22px;
+    -moz-context-properties: fill, fill-opacity;
+    fill: white;
+}
+
+.create_entry:hover {
+    opacity: 1;
+}
+
+#create_entry_2 {
+    position: absolute;
+    right: 14px;
+    top: -36px;
+}
+
+#create_entry {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+#list-indicator:checked ~ #create_entry {
+    opacity: 0;
+    pointer-events: none;
+    right: -28px;
+}
+
+#list ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#list li ::selection {
+    background-color: transparent;
+}
+
+#list li > span {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+    cursor: pointer;
+    position: relative;
+    opacity: 0.6;
+}
+
+.list-inner,
+.list-inner ul,
+.list-inner li,
+.list-inner span {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.932);
+    font-size: 20px;
+    font-family: Cutive Mono;
+    user-select: none;
+}
+
+#list .current span {
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+#list .del {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 20px;
+    display: inline-block;
+    color: transparent;
+    background-size: 20px;
+    fill: white;
+    -moz-context-properties: fill, fill-opacity;
+    background-image: url(./icons/delete.svg);
+    width: 20px;
+    height: 20px;
+    fill-opacity: 0;
+    opacity: 0;
+}
+
+#list li:hover .del {
+    opacity: 0.7;
+}
+
+#list .del:hover {
+    fill-opacity: 0.6;
+}
+
+#list .current .del {
+    opacity: 0.7;
+}
+
+#list .current .del:hover {
+    opacity: 1;
+}
+
+#list .current {
+    position: relative;
+}
+
+#list .current > span,
+#list .current a:hover {
+    cursor: default;
+}

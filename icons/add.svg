@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+    <path fill="context-fill" fill-opacity="context-fill-opacity" fill-rule="evenodd"
+        d="M10 0c5.5 0 10 4.5 10 10s-4.5 10-10 10S0 15.5 0 10 4.5 0 10 0zm0 .9c5 0 9.1 4.1 9.1 9.1S15 19.1 10 19.1.9 15 .9 10 5 .9 10 .9zm.4 8.7h5.2v.9h-5.2v5.2h-.8v-5.2H4.3v-.9h5.2V4.3h.9v5.3z"
+        clip-rule="evenodd" />
+</svg>

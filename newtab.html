@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link type="image/x-icon" href="./favicon.ico" rel="icon" />
+        <title>Tab Notes</title>
+        <script type="text/javascript" src="./browser-polyfill.min.js"></script>
+        <script type="text/javascript" src="./migration.js"></script>
+        <script type="text/javascript" src="./utils.js"></script>
+        <script type="text/javascript" src="./newtab.js"></script>
+        <link rel="stylesheet" href="./newtab.css" />
+        <style></style>
+    </head>
+
+    <body>
+        <input type="checkbox" id="list-indicator" class="hide" />
+        <div id="list">
+            <img id="create_entry_2" class="create_entry" src="./icons/add.svg" />
+            <div id="list-outer">
+                <div class="list-inner">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+        <img id="create_entry" class="create_entry" src="./icons/add.svg" />
+        <label id="list-trigger" for="list-indicator">
+            <span></span>
+        </label>
+        <textarea id="note-content" placeholder="write some notes..."></textarea>
+    </body>
+</html>
