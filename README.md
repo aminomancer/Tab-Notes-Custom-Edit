@@ -11,10 +11,6 @@ Open new tab and write anything.
 * **Browser-action with shortcut**: You could use it without changing your current new tab page
 * Open-source
 
-## Shortcuts
-
-- `Ctrl/Cmd + Y`: To open the browser-action tab notes.
-
 ## Download
 Forked from Tab Notes, available here:
 * [Firefox](https://addons.mozilla.org/firefox/addon/tab-notes/)
